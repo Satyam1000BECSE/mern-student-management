@@ -18,9 +18,9 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "http://localhost:5173", // Vite local
-    "http://localhost:3000", // CRA local
-    "https://student-course-management-system.vercel.app" // after deploy
+    "http://localhost:5173",
+    "http://localhost:3000",
+    process.env.CLIENT_URL
   ],
   credentials: true
 }));
